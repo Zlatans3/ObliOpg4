@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using Microsoft.VisualBasic;
 
-namespace FootBallPlayer
+namespace NFL2021.Model
 {
     public class FootBallPlayer
     {
@@ -21,7 +15,7 @@ namespace FootBallPlayer
             get => _name;
             set
             {
-                if (value.Length > 4) throw new ArgumentOutOfRangeException();
+                if (value.Length < 4) throw new ArgumentOutOfRangeException();
                 _name = value;
             }
         }
