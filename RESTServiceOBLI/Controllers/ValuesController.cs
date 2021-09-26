@@ -33,7 +33,7 @@ namespace RestItemService.Controllers
         }
         // POST api/<PBPController>
         [HttpPost]
-        bool Post([FromBody] FootBallPlayer value)
+        public bool Post([FromBody] FootBallPlayer value)
         {
             _mgr.Create(value);
             return true;
@@ -41,7 +41,7 @@ namespace RestItemService.Controllers
 
         // PUT api/<PBPController>/5
         [HttpPut("{id}")]
-        bool Put(int id, [FromBody] FootBallPlayer value)
+        public bool Put(int id, [FromBody] FootBallPlayer value)
         {
             _mgr.Update(id, value);
             return true;
@@ -49,7 +49,7 @@ namespace RestItemService.Controllers
 
         // DELETE api/<PBPController>/5
         [HttpDelete("{id}")]
-        FootBallPlayer Delete(int id)
+        public FootBallPlayer Delete(int id)
         {
             FootBallPlayer footBallPlayer = _mgr.Get(id);
             _mgr.Delete(id);
